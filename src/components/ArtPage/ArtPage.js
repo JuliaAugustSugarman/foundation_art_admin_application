@@ -9,7 +9,7 @@ class ArtPage extends Component {
 
   
     render() {
-      console.log('im here');
+      console.log('this is a clear page with clear objectives');
       
 
         return (
