@@ -11,10 +11,11 @@ class ArtPage extends Component {
     render() {
       console.log('this is a clear page with clear objectives');
       
-
+//HOW do I tag these to the database!!
         return (
+            
            <div>
-
+                
            </div>
         );
     }
