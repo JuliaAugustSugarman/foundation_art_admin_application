@@ -9,4 +9,9 @@ const setArtworkReducer = (state = [], action) => {
     }
 }
 
+
+
+
+
+
 export default setArtworkReducer;
