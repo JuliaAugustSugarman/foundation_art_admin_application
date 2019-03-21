@@ -1,15 +1,17 @@
 import axios from 'axios';
 
 // Import saga middleware
-import { takeEvery, put as dispatch, actionChannel } from 'redux-saga/effects';
+import { takeEvery, put as dispatch} from 'redux-saga/effects';
 
 
 //root Saga
 function* artSaga() {
     yield takeEvery('FETCH_GALLERY', getArtwork);
-    // yield takeEvery('SET_WORK', placeArtwork);
-    // yield takeEvery('')
+    yield takeEvery('DELETE_ARTWORK', deleteArt);
 }
+
+
+
 
 
 function* getArtwork() {
@@ -18,9 +20,16 @@ function* getArtwork() {
 }
 
 
-// function* placeArtwork(action) {
-//     // const placeArtwork = yield axios.get('/api/artPage');
-//     yield dispatch({ type: 'SELECTED_WORK', payload: action.payload });
-// }
+
+function * deleteArt(action) {
+    try {
+        yield axios.delete('/artpage/' + action.payload);
+        yield dispatch({ type: 'FETCH_GALLERY' });
+    }
+    catch (error) {
+        console.log('error deleting', action, error);
+    }
+}
+
 
 export default artSaga;

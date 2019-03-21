@@ -23,6 +23,11 @@ class GalleryComponent extends Component {
 
     }
 
+    handleDelete = id => {
+        return () => {
+            this.props.dispatch({ type: 'DELETE_ARTWORK', payload: id })
+        }
+    }
 
     render() {
         // console.log('Art lives on', this.props.setArtworkReducer);
@@ -39,7 +44,7 @@ class GalleryComponent extends Component {
                 <div className="imageGallery">
                     <img key={this.props.item.id} src={this.props.item.image} alt="a banana" /><br />
                     <button onClick={this.handleClick(this.props.item)} >VIEW WORK DETAILS</button>
-                 
+                    <button onClick={this.handleDelete(this.props.artPageReducer.id)}>Delete Artwork</button>
                                
                 </div>
             </div>

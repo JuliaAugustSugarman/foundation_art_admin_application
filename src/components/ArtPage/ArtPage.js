@@ -8,7 +8,9 @@ import { connect } from 'react-redux';
 class ArtPage extends Component {
     // Renders the entire app on the DOM
 
+   
   
+
     render() {
         console.log('YO TONY', this.props.artPageReducer);
       
@@ -30,7 +32,7 @@ class ArtPage extends Component {
                         <li>{this.props.artPageReducer.type}</li>
                         <li>{this.props.artPageReducer.description}</li>
                     </ul>
-
+                    
             </div>
 
                        
