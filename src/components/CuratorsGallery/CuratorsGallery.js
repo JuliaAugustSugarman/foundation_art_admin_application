@@ -4,51 +4,32 @@ import { connect } from 'react-redux';
 import GalleryComponent from '../GalleryComponent/GalleryComponent';
 
 
-
-
 class CuratorsGallery extends Component {
-  // state = {
-  //   redirect: false,
 
-  // }
   componentDidMount() {
     this.getArtwork();
   }
 
-  //props reducer
+  //GET entire gallery of work
   getArtwork() {
     this.props.dispatch({ type: 'FETCH_GALLERY' })
   }
-//   //redirects view artwork button to another page
-//   handleClick = () => {
-//     this.setState({
-//       redirect: true,
 
-//     })
-// }
+  //displays the gallery of work 
   displayArt() {
     console.log('inside disp function', this.props.setArtworkReducer);
-    return this.props.setArtworkReducer.map(item=>
-    <GalleryComponent key={item.id} item={item}/>)
-    
+    return this.props.setArtworkReducer.map(item =>
+      <GalleryComponent key={item.id} item={item} />)
   }
-  render() {
-   
 
+
+  render() {
     return (
       <>
         <div>
-
-
-          
-            <div>
-               {this.displayArt()}
-          
-             </div>
-
-         
-
-
+          <div>
+            {this.displayArt()}
+          </div>
         </div>
       </>
     );

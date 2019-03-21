@@ -3,9 +3,8 @@ const pool = require('../modules/pool');
 const router = express.Router();
 const { rejectUnauthenticated } = require('../modules/authentication-middleware');
 
-/**
- * GET route template
- */
+
+//  GET route template
 router.get('/', rejectUnauthenticated , (req, res) => {
     const queryText = (`SELECT "image", "size", "color", "name", "price", "type", "description" FROM "artwork" 
                         FULL JOIN "junction" ON "junction"."artwork_id" = "artwork"."id" 
@@ -22,18 +21,14 @@ router.get('/', rejectUnauthenticated , (req, res) => {
 });
 
 
-/**
- * POST route template
- */
+
+//  POST route template
 router.post('/', (req, res) => {
 
 });
 
-
-
 //DELETE Route
-
-router.delete('/:id', (req, res) => {
+router.delete('/id', (req, res) => {
 
     console.log(req.params);
 

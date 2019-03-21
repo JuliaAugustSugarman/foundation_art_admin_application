@@ -1,6 +1,6 @@
 
 // Used to store projects returned from the server
-const artPageReducer = (state = [], action) => {
+const setArtworkReducer = (state = [], action) => {
     switch (action.type) {
         case 'SET_ART':
             return action.payload;
@@ -14,4 +14,4 @@ const artPageReducer = (state = [], action) => {
 
 
 
-export default artPageReducer;
+export default setArtworkReducer;

@@ -23,7 +23,7 @@ function* getArtwork() {
 
 function * deleteArt(action) {
     try {
-        yield axios.delete('/artpage/' + action.payload);
+        yield axios.delete('/api/gallery/' + action.payload);
         yield dispatch({ type: 'FETCH_GALLERY' });
     }
     catch (error) {
