@@ -10,15 +10,31 @@ class ArtPage extends Component {
 
   
     render() {
-        console.log('this is a clear page with clear objectives', this.props.setArtworkReducer);
+        console.log('YO TONY', this.props.artPageReducer);
       
 //How do I get the image ID into this page
         return (
            
      <div>
-               
-               
-                          
+              <div>
+                  <img src= {this.props.artPageReducer.image} />
+              </div> 
+              
+              
+             <div>
+                <ul>
+                   <li>{this.props.artPageReducer.size}</li>
+                        <li>{this.props.artPageReducer.color}</li>
+                        <li>{this.props.artPageReducer.price}</li>
+                        <li>{this.props.artPageReducer.name}</li>
+                        <li>{this.props.artPageReducer.type}</li>
+                        <li>{this.props.artPageReducer.description}</li>
+                    </ul>
+
+            </div>
+
+                       
+    
                
                
                
