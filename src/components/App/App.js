@@ -17,6 +17,7 @@ import AboutPage from '../AboutPage/AboutPage';
 import UserPage from '../UserPage/UserPage';
 import CuratorsGallery from '../CuratorsGallery/CuratorsGallery';
 import ArtPage from '../ArtPage/ArtPage'
+import addArtworkForm from '../addArtworkForm/addArtworkForm'
 
 import './App.css';
 
@@ -61,6 +62,11 @@ class App extends Component {
               exact
               path="/artpage"
               component={ArtPage}
+            />
+            <ProtectedRoute
+              exact
+              path="/artform"
+              component={addArtworkForm}
             />
 
             {/* If none of the other routes matched, we will show a 404. */}

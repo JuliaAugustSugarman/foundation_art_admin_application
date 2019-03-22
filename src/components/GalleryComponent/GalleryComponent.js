@@ -39,7 +39,7 @@ class GalleryComponent extends Component {
         return (
             <div className="container">
                 <div className="imageGallery">
-                    <img key={this.props.item.id} src={this.props.item.image} alt="a banana" /><br />
+                    <img key={this.props.item.id} src={this.props.item.image} alt={this.props.item} /><br />
                     <button onClick={this.handleClick(this.props.item)} >VIEW WORK DETAILS</button>
                     <button onClick={this.handleDelete(this.props.artPageReducer.id)}>DELETE ARTWORK</button>
                 </div>

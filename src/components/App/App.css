@@ -15,7 +15,10 @@ body {
 
 }
 
-
+#box{
+    height: 150px;
+    width: 250px;
+}
 form {
     background-color: #dbd5d5;
     width: 30%;
@@ -56,9 +59,9 @@ input {
 
 
 .log-in, .log-out, .register {
-  background-color: #a4a881;
+  background-color: whitesmoke ;
   border-radius: 4px;
-  color: #f8f8f8;
+  color: black;
   min-height: 50px;
   min-width: 100px;
   outline:0;
@@ -66,7 +69,7 @@ input {
 }
 
 .log-in:hover, .log-out:hover, .register:hover {
-  background-color: #ff67a1;
+  background-color: rgb(170,172,57);
 }
 
 .pageImage{

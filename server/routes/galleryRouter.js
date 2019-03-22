@@ -6,11 +6,12 @@ const { rejectUnauthenticated } = require('../modules/authentication-middleware'
 
 //  GET route template
 router.get('/', rejectUnauthenticated , (req, res) => {
-    const queryText = (`SELECT "image", "size", "color", "name", "price", "type", "description" FROM "artwork" 
-                        FULL JOIN "junction" ON "junction"."artwork_id" = "artwork"."id" 
-                        FULL JOIN "style" ON "style"."id" = "junction"."style_id"
-                        FULL JOIN "color_table" ON "color_table"."id"= "junction"."color_id"
-                        FULL JOIN "artist" ON "artist"."id" = "junction"."artist_id"`)
+    const queryText = (`SELECT * FROM "artwork" 
+                        JOIN "junction" ON "junction"."artwork_id" = "artwork"."id" 
+                        JOIN "style" ON "style"."id" = "junction"."style_id"
+                        JOIN "color_table" ON "color_table"."id"= "junction"."color_id"
+                        JOIN "artist" ON "artist"."id" = "junction"."artist_id"
+                        ;`)
     pool.query(queryText).then((result) => {
         res.send(result.rows)
         console.log('in router get', result.rows);
@@ -24,7 +25,25 @@ router.get('/', rejectUnauthenticated , (req, res) => {
 
 //  POST route template
 router.post('/', (req, res) => {
-
+    console.log('TJ', req.body);
+    
+    const newArtWork = req.body;
+    const queryText = `INSERT INTO "artwork" ("image", "size", "price", "description","title")
+                    VALUES ($1, $2, $3, $4, $5)`;
+    const queryValues = [
+        newArtWork.image,
+        newArtWork.size,
+        newArtWork.price,
+        newArtWork.description,
+        newArtWork.title,
+       
+    ];
+    pool.query(queryText, queryValues)
+        .then(() => { res.sendStatus(201); })
+        .catch((err) => {
+            console.log('Error completing SELECT project query', err);
+            res.sendStatus(500);
+        });
 });
 
 //DELETE Route

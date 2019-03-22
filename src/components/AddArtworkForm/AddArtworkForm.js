@@ -3,31 +3,59 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 
-class CuratorsGallery extends Component {
+class addArtWorkForm extends Component {
+state= {
+    image:'',
+    size: '',
+    price: '',
+    description: '',
+    title: '',
+    }
+    
 
-   
+handleChangeFor = (property) => (event) => {
+    this.setState({
+    ...this.state, 
+    [property]: event.target.value,
+    })
+
+}//handleChangeFor add to artwork gallery
 
 
-    render() {
+
+addNewArtwork = () => {
+  console.log(this.state);
+    this.props.dispatch({
+        type: "ADD_ARTWORK",
+        payload: this.state,
+
+    })
+    this.setState({
+    image:'',
+    size: '',
+    price: '',
+    description: '',
+    title: '',
+    })
+}
+
+
+render() {
         return (
-            <>
+        
                 <div>
-                    {/* <form onSubmit={this.addNewArtwork}>
-                        <input value={this.state.artwork.size} onChange={this.handleChangeFor('name')} placeholder="name" />
-                        <input value={this.state.artwork.price} onChange={this.handleChangeFor('date_completed')} type="date" />
-                        <select value={this.state.artwork.color} onChange={this.handleChangeFor('tag_id')}>
-                            <option>- SELECT ACCENT COLOR -</option>
-                            {this.props.tags.map(tag =>
-                                <option key={tag.id}>{tag.name}</option>
-                            )}
-                        </select>
-                        <input value={this.state.artwork.github} onChange={this.handleChangeFor('github')} placeholder="Github" />
-                        <input value={this.state.artwork.website} onChange={this.handleChangeFor('website')} placeholder="Website (optional)" />
-                        <input value={this.state.artwork.description} onChange={this.handleChangeFor('description')} placeholder="Description" />
-                        <input type="submit" value="Submit" />
-                    </form> */}
+                    <form onSubmit={this.addNewArtwork}>
+                       <input value={this.state.image} onChange={this.handleChangeFor('image')} placeholder= "Image URL" />
+                        <input value={this.state.size} onChange={this.handleChangeFor('size')} placeholder= "Size of ArtWork" />
+                        $ <input value={this.state.price} onChange={this.handleChangeFor('price')} type = "number" placeholder ="Price" />
+                         <input id= "box" value={this.state.description} onChange={this.handleChangeFor('description')} placeholder="Description" />
+                        <input value={this.state.title} onChange={this.handleChangeFor('title')} placeholder="Title Of Piece" />
+                       
+                       
+                      <center>  <button>  ADD ARTWORK TO GALLERY  </button></center>
+                    </form>
                 </div>
-            </>
+            
         );
     }
 }
@@ -37,5 +65,5 @@ const mapReduxStateToProps = (reduxState) => {
 }
 
 
-export default connect(mapReduxStateToProps)(CuratorsGallery);
+export default connect(mapReduxStateToProps)(addArtWorkForm);
 
