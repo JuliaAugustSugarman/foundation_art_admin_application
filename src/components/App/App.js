@@ -8,6 +8,7 @@ import {
 
 import {connect} from 'react-redux';
 
+import Header from '../Header/Header';
 import Nav from '../Nav/Nav';
 import Footer from '../Footer/Footer';
 
@@ -16,8 +17,9 @@ import ProtectedRoute from '../ProtectedRoute/ProtectedRoute'
 import AboutPage from '../AboutPage/AboutPage';
 import UserPage from '../UserPage/UserPage';
 import CuratorsGallery from '../CuratorsGallery/CuratorsGallery';
-import ArtPage from '../ArtPage/ArtPage'
-import addArtworkForm from '../addArtworkForm/addArtworkForm'
+import ArtPage from '../ArtPage/ArtPage';
+import addArtworkForm from '../addArtworkForm/addArtworkForm';
+
 
 import './App.css';
 
@@ -29,7 +31,9 @@ class App extends Component {
   render() {
     return (
       <Router>
+        
         <div>
+          <Header />
           <Nav />
           <Switch>
             {/* Visiting localhost:3000 will redirect to localhost:3000/home */}

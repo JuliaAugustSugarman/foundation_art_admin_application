@@ -5,8 +5,8 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0px;
+    font-family: Helvetica, sans-serif;
+    margin: 50px;
 }
 
 
@@ -85,9 +85,6 @@ input {
     
     
 }
-
-
-
 
 ul {
     list-style-type: none;

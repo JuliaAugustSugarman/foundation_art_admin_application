@@ -1,0 +1,9 @@
+.logo{
+    background-image: url(title.png);
+    text-align: center;
+    padding-top: 75px;
+    height: 250px; 
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+}

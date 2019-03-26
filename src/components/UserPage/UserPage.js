@@ -7,18 +7,26 @@ import './user.css';
 // const UserPage = ({ user }) => (
 // and then instead of `props.user.username` you could use `user.username`
 const UserPage = (props) => (
-  <div className="bckgrnd-container">
+  <div className="flex-container">
+    <div className="bckgrnd-container">
 
 
 
-    
-    <h1 id="welcome">
-      Welcome, { props.user.username }!
+      <div className="buttonBox">
+        <button> CURATOR'S GALLERY</button>
+        <button> ADD ART WORK</button>
+        <button> CLIENT BOARDS</button>
+      </div>
+
+
+      <h1 id="welcome">
+        Time to get your art on, {props.user.username}!
     </h1>
-    <p>Your ID is: {props.user.id}</p>
-    <LogOutButton className="log-in" />
+      {/* <p>Your ID is: {props.user.id}</p> */}
+      <LogOutButton className="log-in" />
 
-    
+
+    </div>
   </div>
 );
 

@@ -24,6 +24,7 @@ handleChangeFor = (property) => (event) => {
 
 
 addNewArtwork = () => {
+    alert('Added New ArtWork!')
   console.log(this.state);
     this.props.dispatch({
         type: "ADD_ARTWORK",

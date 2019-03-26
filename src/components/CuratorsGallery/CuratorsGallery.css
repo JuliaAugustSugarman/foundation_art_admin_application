@@ -1,0 +1,11 @@
+.dropdowns select{
+    margin-right: 20px;
+}
+
+.dropdowns{
+    text-align: left;
+}
+
+.whiteSpace {
+    background-color: linear-gradient(white 255, 255, 255, 0.1);
+}

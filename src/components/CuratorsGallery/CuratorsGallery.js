@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import GalleryComponent from '../GalleryComponent/GalleryComponent';
+import './CuratorsGallery.css';
 
 
 class CuratorsGallery extends Component {
@@ -25,11 +26,61 @@ class CuratorsGallery extends Component {
   //displays the gallery of work 
   displayArt() {
     console.log('inside disp function', this.props.setArtworkReducer);
-    return this.props.setArtworkReducer.filter(item => 
-      item.color_id === Number(this.state.color) || 
-      item.style_id === Number(this.state.style) || 
-      item.size === this.state.size).map(item =>
-      <GalleryComponent key={item.id} item={item} />)
+
+    if (this.state.style != '' || this.state.color != '' || this.state.size != '' ){
+      console.log('Filter');
+      
+        // apply filter
+      return this.props.setArtworkReducer.filter(item => {
+
+        if (this.state.color && this.state.style && this.state.size) {
+          return (item.color_id === Number(this.state.color) &&
+            item.style_id === Number(this.state.style) &&
+            item.size === (this.state.size));
+        }
+
+        if (this.state.color && this.state.style) {
+          return (item.color_id === Number(this.state.color) &&
+            item.style_id === Number(this.state.style));
+        }
+
+        if (this.state.color && this.state.size) {
+          return (item.color_id === Number(this.state.color) &&
+            item.size_id === (this.state.size));
+        }
+
+        if (this.state.style && this.state.size) {
+          return (item.style_id === Number(this.state.style) &&
+            item.size_id === (this.state.size));
+        }
+
+        if (this.state.style) {
+          return (item.style_id === Number(this.state.style));
+        }
+
+        if (this.state.color) {
+          return (item.color_id === Number(this.state.color));
+        }
+
+        if (this.state.size) {
+          return (item.size_id === (this.state.size));
+        }
+
+        return true;
+
+      }
+      ).map((item,index) =>
+        <GalleryComponent key={index} item={item} />)
+    }else {
+      console.log('No filter');
+      
+        // no filter
+      return this.props.setArtworkReducer.map((item,index) =>
+        <GalleryComponent key={index} item={item} />)
+    }
+
+    
+    
   }
 
   filterConditions = () => [
@@ -48,12 +99,16 @@ handleChange = (property) =>(event) => {
 
 
   render() {
-    console.log('this.props.setArtworkREducer', this.props.setArtworkReducer);
+    console.log('this.props.setArtworkReducer', this.props.setArtworkReducer);
     console.log('this.state', this.state);
     
+   
     return (
       <>
-     <div>
+      <div className="whiteSpace">
+
+      <div className="dropdowns">
+    
      <select onChange={this.handleChange("style")}>
         <option value=''>STYLE</option>
         <option value="1">Modern Art Work</option>
@@ -78,9 +133,9 @@ handleChange = (property) =>(event) => {
         <option value="20">American Artists</option>
         <option value="21">International Artists</option>
         </select>
-      </div >  
+     
 
-      <div>
+      
         <select onChange={this.handleChange("color")}>
           <option value=''>COLOR</option>
           <option value="1">Pastels</option>
@@ -101,21 +156,21 @@ handleChange = (property) =>(event) => {
           <option value="26">Matallics</option>
           <option value="27">Natural Materials</option>
         </select>
-      </div >  
+     
 
-      <div>
+     
         <select onChange={this.handleChange("size")}>
           <option value=''>SIZE</option>
           <option value="small">Small</option>
           <option value="medium">Medium</option>
           <option value="large">Large</option>
         </select>
-      </div >  
-
+      
+        </div>
           <div>
             {this.displayArt()}
           </div>
-       
+        </div>
       </>
     );
   }

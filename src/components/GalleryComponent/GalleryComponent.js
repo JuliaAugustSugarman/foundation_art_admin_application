@@ -22,11 +22,11 @@ class GalleryComponent extends Component {
 
 
     //Delete button on gallery component
-    handleDelete = id => {
-        return () => {
-            this.props.dispatch({ type: 'DELETE_ARTWORK', payload: id })
-        }
-    }
+    // handleDelete = id => {
+    //     return () => {
+    //         this.props.dispatch({ type: 'DELETE_ARTWORK', payload: id })
+    //     }
+    // }
 
 
     render() {
@@ -41,7 +41,8 @@ class GalleryComponent extends Component {
                 <div className="imageGallery">
                     <img key={this.props.item.id} src={this.props.item.image} alt={this.props.item} /><br />
                     <button onClick={this.handleClick(this.props.item)} >VIEW WORK DETAILS</button>
-                    <button onClick={this.handleDelete(this.props.artPageReducer.id)}>DELETE ARTWORK</button>
+                    <button> RENTED </button>
+                    {/* <button onClick={this.handleDelete(this.props.artPageReducer.id)}>DELETE ARTWORK</button> */}
                 </div>
             </div>
 

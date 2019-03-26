@@ -1,26 +1,31 @@
+
+.flex-container {
+  display: flex;
+}
+
 .nav-title {
-    background-image: linear-gradient(rgba(212, 212, 212, 0.1), rgba(138, 138, 138, 0.3));
-    font-size: 35px;
-    font-weight: 300;
-    display: inline-block;
+  font-family: Arial, Helvetica, sans-serif;
+    font-size: 66px;
+    text-align: center;
     color: black;
-    padding-left: 700px;
+    height: 10px;
+    float: right;
     
 }
 
 .nav {
-  overflow: hidden;
-  /* background-color: rgb(220,82,76); */
-  padding-right: 575px
+  text-align: center;
+  /* overflow: hidden;
+  /* padding-right: 700px; */
   
 }
 
 .nav-link {
-  float: left;
+  float: right;
   color: black;
   /* background-color: rgb(220,82,76); */
   text-align: center;
-  padding: 24px 10px;
+  padding: 0px 35px;
   text-decoration: none;
   font-size: 15px;
 
@@ -36,5 +41,5 @@
 }
 
 .nav-right {
-  float: right;
+  float: center;
 }
