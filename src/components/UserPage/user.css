@@ -2,12 +2,12 @@
 
 
 body {
-    background-image: linear-gradient(rgba(212, 212, 212, 0.1), rgba(138, 138, 138, 0.3)), url(background.png);
+    background-image:  url(background.png);
     text-align: center;
-    height: 1000px; 
+    height: 100%; 
     width: 100%;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-size: cover;
 }
 

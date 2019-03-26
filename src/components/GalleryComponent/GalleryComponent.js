@@ -8,6 +8,7 @@ class GalleryComponent extends Component {
     state = {
         redirect: false,
         selectedImage: '',
+        showAdd: true,
     }
 
 
@@ -21,6 +22,21 @@ class GalleryComponent extends Component {
     }
 
 
+    // toggleButton = () => {
+    //     console.log('in toggle button');
+    //     this.setState({
+    //         showAdd: !(this.state.showAdd),
+    //     })
+    // }
+
+    // showButtonText = () => {
+    //     if (this.state.showAdd) {
+    //         return <button>AVAILABLE</button>
+    //     }
+    //     else {
+    //         return <button onClick={this.removePizza(this.props.item)}>RENTED</button>
+    //     }
+    // }
     //Delete button on gallery component
     // handleDelete = id => {
     //     return () => {
@@ -37,13 +53,19 @@ class GalleryComponent extends Component {
         console.log(this.props.item.image);
 
         return (
-            <div className="container">
+
+            <div className="item-div">
                 <div className="imageGallery">
-                    <img key={this.props.item.id} src={this.props.item.image} alt={this.props.item} /><br />
+                    <div className="image-div">
+                        <img key={this.props.item.id} src={this.props.item.image} alt={this.props.item} /><br />
+                    </div>
+                    <div className = "item-button-div">
                     <button onClick={this.handleClick(this.props.item)} >VIEW WORK DETAILS</button>
                     <button> RENTED </button>
+                    </div>
                     {/* <button onClick={this.handleDelete(this.props.artPageReducer.id)}>DELETE ARTWORK</button> */}
                 </div>
+
             </div>
 
         );
