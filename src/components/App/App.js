@@ -10,7 +10,7 @@ import {connect} from 'react-redux';
 
 import Header from '../Header/Header';
 import Nav from '../Nav/Nav';
-import Footer from '../Footer/Footer';
+// import Footer from '../Footer/Footer';
 
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute'
 
@@ -19,6 +19,7 @@ import UserPage from '../UserPage/UserPage';
 import CuratorsGallery from '../CuratorsGallery/CuratorsGallery';
 import ArtPage from '../ArtPage/ArtPage';
 import addArtworkForm from '../addArtworkForm/addArtworkForm';
+import Home from '../Home/Home';
 
 
 import './App.css';
@@ -33,8 +34,12 @@ class App extends Component {
       <Router>
         
         <div>
+          <div>
+            <Nav />
+          </div> 
+          <div>
           <Header />
-          <Nav />
+          </div>
           <Switch>
             {/* Visiting localhost:3000 will redirect to localhost:3000/home */}
             <Redirect exact from="/" to="/home" />
@@ -58,13 +63,13 @@ class App extends Component {
             they will see the info page instead. */}
             <ProtectedRoute
               exact
-              path="/info"
+              path="/curatorGallery"
               component={CuratorsGallery}
             />
             
             <ProtectedRoute
               exact
-              path="/artpage"
+              path="/artPage"
               component={ArtPage}
             />
             <ProtectedRoute
@@ -73,10 +78,12 @@ class App extends Component {
               component={addArtworkForm}
             />
 
+
             {/* If none of the other routes matched, we will show a 404. */}
             <Route render={() => <h1>404</h1>} />
           </Switch>
-          <Footer />
+          <Home />
+          {/* <Footer /> */}
         </div>
       </Router>
   )}

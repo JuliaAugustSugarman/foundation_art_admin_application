@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router';
+import Grid from '@material-ui/core/Grid';
 
 
 class GalleryComponent extends Component {
@@ -54,19 +55,26 @@ class GalleryComponent extends Component {
 
         return (
 
-            <div className="item-div">
-                <div className="imageGallery">
-                    <div className="image-div">
-                        <img key={this.props.item.id} src={this.props.item.image} alt={this.props.item} /><br />
-                    </div>
-                    <div className = "item-button-div">
-                    <button onClick={this.handleClick(this.props.item)} >VIEW WORK DETAILS</button>
-                    <button> RENTED </button>
-                    </div>
-                    {/* <button onClick={this.handleDelete(this.props.artPageReducer.id)}>DELETE ARTWORK</button> */}
-                </div>
+            <Grid item sm={12} md={4} lg={3} className="item-div">
 
-            </div>
+                <Grid container className="imageGallery">
+
+                    <Grid item sm={12} className="image-div">
+                        <img key={this.props.item.id} src={this.props.item.image} alt={this.props.item} /><br />
+                    </Grid>
+
+                    <Grid item sm={12} className="item-button-div">
+                        <button onClick={this.handleClick(this.props.item)} >VIEW WORK DETAILS</button>
+                    </Grid>
+
+                    <Grid item sm={12}>
+                        <button> RENTED </button>
+                    </Grid>
+
+                </Grid>
+            </Grid>
+
+
 
         );
     }

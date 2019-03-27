@@ -7,6 +7,8 @@
 }
 
 .whiteSpace {
-    background-color: linear-gradient(white 255, 255, 255, 0.1);
+     /* background-image: url(pinkGradient.png); */
+    /* background-color: white; */
+    height: 100%;
 }
 

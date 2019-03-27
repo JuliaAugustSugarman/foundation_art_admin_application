@@ -1,9 +1,13 @@
 .logo{
-    background-image: url(title.png);
-    text-align: center;
-    padding-top: 75px;
-    height: 250px; 
-    width: 100%;
-    background-position: center;
-    background-size: cover;
+    /* background: url(title2.png) center center no-repeat; */
+    /* background-position: center;
+    background-repeat: no-repeat; */
+    padding-top: 200px;
+    background-size: 200%;
+    box-align: center;
+    margin: 0;
+   
+}
+.logo{
+       background-Image: no-repeat;
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import LogOutButton from '../LogOutButton/LogOutButton';
+import { withRouter } from 'react-router-dom';
 import './user.css';
 
 // this could also be written with destructuring parameters as:
@@ -9,14 +10,7 @@ import './user.css';
 const UserPage = (props) => (
   <div className="flex-container">
     <div className="bckgrnd-container">
-
-
-
-      <div className="buttonBox">
-        <button> CURATOR'S GALLERY</button>
-        <button> ADD ART WORK</button>
-        <button> CLIENT BOARDS</button>
-      </div>
+     
 
 
       <h1 id="welcome">
@@ -38,4 +32,5 @@ const mapStateToProps = state => ({
 });
 
 // this allows us to use <App /> in index.js
-export default connect(mapStateToProps)(UserPage);
+
+export default withRouter(connect(mapStateToProps)(UserPage));
