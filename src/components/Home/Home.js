@@ -10,8 +10,16 @@ class Home extends Component {
         this.props.history.push('/curatorGallery')
     };
 
-    handleClickArtPage = () => {
-        this.props.history.push('/artPage')
+    handleClickAddArtwork = () => {
+        this.props.history.push('/artform')
+    };
+
+    handleClickClientBoards = () => {
+        this.props.history.push('/clientBoards')
+    };
+
+    handleClickAddClient = () => {
+        this.props.history.push('/clientForm')
     };
 
 
@@ -19,15 +27,23 @@ class Home extends Component {
         return (
             <>
           <div>
-                    <div className="buttonBox">
-                        <button onClick = {this.handleClickGallery} > CURATOR'S GALLERY</button>
-                        <button onClick = {this.handleClickArtPage}> ADD ART WORK</button>
-                        <button> CLIENT BOARDS</button>
+              <div className="container">
+
+                    <div className="buttonBox button-grid-container">
+                        
+                            <div className="button-grid-item"><button className="homeButton " onClick={this.handleClickGallery} > CURATOR'S GALLERY</button></div>
+                        
+                            <div className="button-grid-item"><button className="homeButton" onClick = {this.handleClickClientBoards}> CLIENT BOARDS</button></div>
+                          
+                            <div className="button-grid-item"><button className="homeButton" onClick = {this.handleClickAddArtwork}> ADD ART WORK</button></div>
+                            <div className="button-grid-item"><button className="homeButton" onClick={this.handleClickAddClient}> ADD CLIENT</button></div>
+                           
+
                     </div>
 
+                    </div>
 
-
-          </div>
+                     </div>
             
                
             </>

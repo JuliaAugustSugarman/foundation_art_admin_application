@@ -23,12 +23,12 @@ class GalleryComponent extends Component {
     }
 
 
-    // toggleButton = () => {
-    //     console.log('in toggle button');
-    //     this.setState({
-    //         showAdd: !(this.state.showAdd),
-    //     })
-    // }
+    toggleButton = () => {
+        console.log('in toggle button');
+        this.setState({
+            showAdd: !(this.state.showAdd),
+        })
+    }
 
     // showButtonText = () => {
     //     if (this.state.showAdd) {
@@ -44,6 +44,12 @@ class GalleryComponent extends Component {
     //         this.props.dispatch({ type: 'DELETE_ARTWORK', payload: id })
     //     }
     // }
+  
+
+    getButton = () => {
+        return this.state.showAdd ? <button onClick={this.toggleButton}>AVAILABLE</button> : 
+        <button style={{ backgroundColor: 'blue' }} onClick={this.toggleButton}>RENTED</button>;
+    }
 
 
     render() {
@@ -55,26 +61,22 @@ class GalleryComponent extends Component {
 
         return (
 
-            <Grid item sm={12} md={4} lg={3} className="item-div">
+         
 
-                <Grid container className="imageGallery">
+            <Grid item sm={2} xs={12} className="image-div">
+                <img key={this.props.item.id} src={this.props.item.image} alt={this.props.item} /> <br />
 
-                    <Grid item sm={12} className="image-div">
-                        <img key={this.props.item.id} src={this.props.item.image} alt={this.props.item} /><br />
-                    </Grid>
 
-                    <Grid item sm={12} className="item-button-div">
-                        <button onClick={this.handleClick(this.props.item)} >VIEW WORK DETAILS</button>
-                    </Grid>
+                <div className="item-button-div">
+                    <button onClick={this.handleClick(this.props.item)} >VIEW WORK DETAILS</button>
+                </div>
 
-                    <Grid item sm={12}>
-                        <button> RENTED </button>
-                    </Grid>
-
+                <div className="item-button-div">
+                    {/* <button style={{backgroundColor: 'blue'}} onClick={this.toggleButton}>{this.getButtonText()}</button> */}
+                    {this.getButton()}
+                </div>
                 </Grid>
-            </Grid>
-
-
+              
 
         );
     }

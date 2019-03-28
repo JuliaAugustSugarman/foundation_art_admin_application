@@ -11,7 +11,7 @@ class Header extends Component {
 <>
             <div>
 
-                <img src="images/final2.png"/>
+                <img class="logo" src="images/final2.png" alt="header"/>
 
             </div>
             </>

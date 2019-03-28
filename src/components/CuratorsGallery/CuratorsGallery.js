@@ -174,11 +174,11 @@ class CuratorsGallery extends Component {
             </Grid>
           </Grid>
 
-          <Grid item>
-            <Grid container>
+          {/* <Grid item> */}
+            <Grid container spacing={24}>
               {this.displayArt()}
             </Grid>
-          </Grid>
+          {/* </Grid> */}
 
         </Grid>
       </>
