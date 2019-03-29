@@ -13,7 +13,7 @@
   clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
   cursor: pointer;
   text-align: center;
-  font-family: 'Julius Sans One', sans-serif;
+  font-family: 'Monoton', cursive;
   transition: all .3s;
 }
 
@@ -28,14 +28,6 @@
     
 }
 
-/* .buttonBox{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 50%;
-   transform: translate(-50%, -50%)
-
-} */
 
 .button-grid-container {
     display: grid;
@@ -45,7 +37,5 @@
 }
 
 .button-grid-item {
-  /* padding: 20px;
-  font-size: 30px; */
   text-align: center;
 }

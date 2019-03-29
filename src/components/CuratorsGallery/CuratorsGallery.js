@@ -175,7 +175,7 @@ class CuratorsGallery extends Component {
           </Grid>
 
           {/* <Grid item> */}
-            <Grid container spacing={24}>
+            <Grid className="add-margin" container spacing={24}>
               {this.displayArt()}
             </Grid>
           {/* </Grid> */}
