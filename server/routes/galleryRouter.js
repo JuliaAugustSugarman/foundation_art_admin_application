@@ -29,7 +29,7 @@ router.post('/', (req, res) => {
     
     const newArtWork = req.body;
     const queryText = `INSERT INTO "artwork" ("image", "size", "price", "description","title")
-                    VALUES ($1, $2, $3, $4, $5)`;
+                        VALUES ($1, $2, $3, $4, $5) RETURNING id;`
     const queryValues = [
         newArtWork.image,
         newArtWork.size,
@@ -39,7 +39,10 @@ router.post('/', (req, res) => {
        
     ];
     pool.query(queryText, queryValues)
-        .then(() => { res.sendStatus(201); })
+        .then((res) => { 
+            console.log('this is my returning res.rows', res.rows);
+            
+             })
         .catch((err) => {
             console.log('Error completing SELECT project query', err);
             res.sendStatus(500);

@@ -58,7 +58,8 @@ class GalleryComponent extends Component {
             return <Redirect to={{ pathname: '/artpage' }} />
         }
         console.log(this.props.item.image);
-
+        console.log('Tj', this.props.setArtworkReducer);
+        
         return (
 
          

@@ -9,6 +9,12 @@
 
 .whiteSpace {
      /* background-image: url(pinkGradient.png); */
-    /* background-color: white; */
+    background-color: white;
     height: 100%;
 }
+
+body{
+    /* background-image: none !important; */
+    background-color: white;
+}
+

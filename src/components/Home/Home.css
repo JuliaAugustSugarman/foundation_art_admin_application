@@ -13,14 +13,17 @@
   clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
   cursor: pointer;
   text-align: center;
-  font-family: 'Monoton', cursive;
+ font-family: 'Julius Sans One', sans-serif;
   transition: all .3s;
 }
-
+body{
+  background-image:  url(background.png);
+}
 .homeButton:hover {
     background-color: rgb(68, 145, 148);
 }
 .container{
+  
     margin-top: 40px;
     margin: 35px;
     width: 100%;
