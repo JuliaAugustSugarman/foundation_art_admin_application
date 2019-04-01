@@ -14,7 +14,7 @@ import AboutPage from '../AboutPage/AboutPage';
 import UserPage from '../UserPage/UserPage';
 import CuratorsGallery from '../CuratorsGallery/CuratorsGallery';
 import ArtPage from '../ArtPage/ArtPage';
-import addArtworkForm from '../addArtworkForm/addArtworkForm';
+import addArtworkForm from '../AddArtworkForm/AddArtworkForm';
 import Home from '../Home/Home';
 import ClientBoards from '../ClientBoards/ClientBoards';
 import ClientPage from '../ClientPage/ClientPage';

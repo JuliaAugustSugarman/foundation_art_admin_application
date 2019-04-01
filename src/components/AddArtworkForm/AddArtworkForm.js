@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 
-class addArtWorkForm extends Component {
+class AddArtWorkForm extends Component {
 state= {
     image:'',
     size: '',
@@ -66,5 +66,5 @@ const mapReduxStateToProps = (reduxState) => {
 }
 
 
-export default connect(mapReduxStateToProps)(addArtWorkForm);
+export default connect(mapReduxStateToProps)(AddArtWorkForm);
 
