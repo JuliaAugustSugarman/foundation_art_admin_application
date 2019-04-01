@@ -111,10 +111,10 @@ class CuratorsGallery extends Component {
               <Grid item>
                 <select onChange={this.handleChange("style")}>
                   <option value=''>STYLE</option>
-                  <option value="22">Still Life</option>
                   <option value="1">Modern Art Work</option>
                   <option value="2">Digital Prints</option>
                   <option value="3">Pop Art</option>
+                  <option value="22">Still Life</option>
                   <option value="4">Abstract Landscape</option>
                   <option value="5">Realist Landscape</option>
                   <option value="6">Graffiti</option>
@@ -169,6 +169,8 @@ class CuratorsGallery extends Component {
               </Grid>
             </Grid>
           </Grid>
+
+         
 
           {/* <Grid item> */}
             <Grid className="add-margin" container spacing={24}>

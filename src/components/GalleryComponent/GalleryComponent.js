@@ -76,6 +76,16 @@ class GalleryComponent extends Component {
                     {/* <button style={{backgroundColor: 'blue'}} onClick={this.toggleButton}>{this.getButtonText()}</button> */}
                     {this.getButton()}
                 </div>
+
+                <div>
+                    <select className="clientButton">
+                        <option>SELECT PROJECT BOARD</option>
+                        <option>Prime Digital Academy</option>
+                        <option>RCM Plaza</option>
+                        <option>Foshay</option>
+                    </select>
+                </div>
+                
                 </Grid>
               
 
