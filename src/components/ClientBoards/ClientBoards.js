@@ -12,7 +12,11 @@ class ClientBoards extends Component {
         return (
             <>
                 <div>
-                   <h1 class = "background">Client Boards Coming Soon</h1>
+                   
+                    <div className="clientbody">
+                        <img src={require('./clientPage.pngnpm')} />
+                    
+                    </div>
 
 
 
