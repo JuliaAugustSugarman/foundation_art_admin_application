@@ -1,5 +1,6 @@
 body {
     /* background-image:  url(background.png); */
+    font-family: 'Syncopate', sans-serif;
     text-align: center;
     height: 100%; 
     width: 100%;
@@ -16,4 +17,9 @@ body {
 .buttonBox {
   display: flex;
   justify-content: center;
+}
+
+.dropdowns{
+    text-align: left;
+    margin-bottom: 200px;
 }

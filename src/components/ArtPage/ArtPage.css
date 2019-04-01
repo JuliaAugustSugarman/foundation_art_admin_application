@@ -1,0 +1,44 @@
+.pageImage{
+    float: right;
+    height: 600px;
+   
+}
+
+.pageImageSize{
+    height: auto;
+    margin-right: 150px;
+   /* border-radius: 20px;
+   border: 4px solid #5c5b5b;
+  background: #c5c5c5; */
+}
+
+
+
+.pageList{
+ position: left;
+  border-radius: 50px;
+  margin-left: 250px;
+  border: 4px solid #ff8b7c;
+  background: #f6c4c3;
+  padding: 15px; 
+  width: 500px;
+  height: 450px; 
+  text-align: auto;
+  color:#047f9e;
+  font-family: 'Quicksand', sans-serif;
+  letter-spacing: 5px;
+  text: auto;
+}
+
+.artPageList{
+  font-size: 23px;
+  text-align: left;
+  padding-top: 0px;
+ 
+  padding-bottom: 50px;
+  
+}
+
+.imageText{
+  align: center;
+}

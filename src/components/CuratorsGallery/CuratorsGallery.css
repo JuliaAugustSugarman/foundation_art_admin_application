@@ -1,23 +1,28 @@
 .dropdowns select{
-    margin-right: 20px;
+    align-items: center;
+    margin-right: 50px;
+    padding-right: 100px;
+    color: #ff5b45;
 }
 
 .dropdowns{
-    text-align: left;
+    text-align: center;
     margin-bottom: 200px;
+    
 }
 
 .whiteSpace {
      /* background-image: url(pinkGradient.png); */
-    background-color: white;
-    height: 100%;
+    /* background-color:#f6c4c3; */
+    height: 500%;
 }
 
 body{
-    /* background-image: none !important; */
+    /* background-image: url(whtie-bk.png) !important; */
     background-color: white;
 }
 
 .add-margin{
-    margin: 24px;
+    margin: 100px;
+    height: 100%;
 }

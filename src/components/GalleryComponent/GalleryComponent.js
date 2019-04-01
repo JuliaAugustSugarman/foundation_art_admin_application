@@ -48,7 +48,7 @@ class GalleryComponent extends Component {
 
     getButton = () => {
         return this.state.showAdd ? <button onClick={this.toggleButton}>AVAILABLE</button> : 
-        <button style={{ backgroundColor: 'blue' }} onClick={this.toggleButton}>RENTED</button>;
+            <button style={{ backgroundColor: '#ff5b45' }} onClick={this.toggleButton}>RENTED</button>;
     }
 
 
@@ -64,7 +64,7 @@ class GalleryComponent extends Component {
 
          
 
-            <Grid item sm={2} xs={12} className="image-div">
+            <Grid item sm={3} xs={12} className="image-div">
                 <img key={this.props.item.id} src={this.props.item.image} alt={this.props.item} /> <br />
 
 

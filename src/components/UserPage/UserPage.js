@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import LogOutButton from '../LogOutButton/LogOutButton';
+// import LogOutButton from '../LogOutButton/LogOutButton';
 import { withRouter } from 'react-router-dom';
 
 // import Home from '../Home/Home';

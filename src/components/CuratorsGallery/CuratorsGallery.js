@@ -85,11 +85,6 @@ class CuratorsGallery extends Component {
 
   }
 
-  filterConditions = () => [
-
-  ]
-
-
 
   handleChange = (property) => (event) => {
     this.setState({
@@ -116,6 +111,7 @@ class CuratorsGallery extends Component {
               <Grid item>
                 <select onChange={this.handleChange("style")}>
                   <option value=''>STYLE</option>
+                  <option value="22">Still Life</option>
                   <option value="1">Modern Art Work</option>
                   <option value="2">Digital Prints</option>
                   <option value="3">Pop Art</option>

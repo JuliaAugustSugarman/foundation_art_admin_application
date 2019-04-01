@@ -2,8 +2,8 @@
 .flex-container {
   display: flex;
 }
+
 .navImage{
-  
   align-content: left;
   background-position: center;
   background-repeat: repeat;
@@ -11,8 +11,7 @@
 
 }
 .nav-title {
-   
-  font-family: 'Julius Sans One', sans-serif;
+  font-family: 'Syncopate', sans-serif;
     /* font-size: 0px; */
     text-align: center;
     color: black;
@@ -31,24 +30,24 @@
 .nav-link {
   float: left;
   font-size: 24px;
-  color:#d3524c;
+  color: #ff5b45;
   text-align: center;
   padding: 0px 25px;
   text-decoration: none;
-  /* font-size: 15px; */
-  /* background-color: rgb(220,82,76); */
-
-  /* these last two make the logout button in
-  the nav bar look like another link */
   border:none;
   cursor: pointer;
   outline:0;
 }
 
 .nav-link:hover {
-  background-color: rgb(170,172,57);
+  background-color: #f6c4c3;
 }
 
+.logoutButton{
+   position: absolute;
+  left: 150px;
+  
+}
 /* .nav-right {
   float: center;
 } */

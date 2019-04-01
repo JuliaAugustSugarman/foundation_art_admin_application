@@ -6,10 +6,11 @@
 
 body {
     /* font-family: 'Poiret One', cursive; */
-   font-family: 'Poiret One', cursive;
+  font-family: 'Raleway', sans-serif;
     
     margin: 0px;
     padding: 0px;
+    
     
 }
 
@@ -21,32 +22,40 @@ body {
    /* padding: 40px;
    padding-right: 20;
    padding-left: 20; */
-  font-family: 'Poiret One', cursive;
+font-family: 'Raleway', sans-serif;
    /* background-color: rgb(80, 85, 80); */
    /* background-color: whitesmoke; */
    /* box-shadow:  2px 2px black; */
-   border: 1px solid white;
+   border: 1px solid rgb(253, 227, 227);
    /* margin-right: 12px;
    margin-left: 45px; */
+    
 }
 
 .image-div{
-    height: 400px;
+    /* margin: 40px; */
+    height: 500px;
    width: 400px;
-   display: block;
+   /* display: block; */
     margin-left: auto;
     margin-right: auto;
-     object-fit: cover;
+     /* object-fit: cover; */
+     padding-top: 50px;
+   
+     
      /* overflow: hidden; */
 }
 
 .image-div img:hover {
+    margin-top: 40px;
   height: 300px;
   width: 300px;
-  opacity: 1;
+  opacity: .55;
   filter: saturate(1);
+  
 }
 .image-div img {
+  margin-top: 40px;
   height: 300px;
   width: 300px;
   object-fit: cover;
@@ -58,25 +67,26 @@ body {
 .item-button-div {
     /* width: 400px; */
     /* border-top: .2px solid #bbbbbb; */
+    /* padding-bottom: 20px; */
     text-align: center;
 }
 
 
 .item-button-div button {
     border: none;
-font-family: 'Poiret One', cursive;
-    color: #696969;
+    font-family: 'Raleway', sans-serif;
+    color: #2987af;
     font-weight: 700;
     font-size: 1em;
-    padding: 10px;
+    padding: 15px;
     margin-top: 5px;
     transition: color .4s;
     outline: none;
-    width: 200px;
+    width: 300px;
 }
 
 .item-button-div button:hover {
-    color: #cf2121;
+    color: black;
     cursor: pointer;
 }
 
@@ -113,7 +123,7 @@ input {
 
 
 .log-in, .log-out, .register {
-  background-color: whitesmoke ;
+  /* background-color: whitesmoke ; */
   border-radius: 4px;
   color: black;
   min-height: 50px;

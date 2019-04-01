@@ -18,20 +18,22 @@ class ArtPage extends Component {
 
         return (
 
-            <div>
+            <div className="imageText">
                 <div className="pageImage">
                     <img className="pageImageSize" src={this.props.artPageReducer.image} alt="a banana" />
                 </div>
 
-
+              
+                
+                    
                 <div className="pageList">
-                    <ul>
-                        <li>{this.props.artPageReducer.size}</li>
-                        <li>{this.props.artPageReducer.color}</li>
-                        <li>{this.props.artPageReducer.price}</li>
-                        <li>{this.props.artPageReducer.name}</li>
-                        <li>{this.props.artPageReducer.type}</li>
-                        <li>{this.props.artPageReducer.description}</li>
+                    <ul className="artPageList">
+                        <li>Size:   {this.props.artPageReducer.size}</li>
+                        <li>Color:  {this.props.artPageReducer.color}</li>
+                        <li>Price:  ${this.props.artPageReducer.price}</li>
+                        <li>Artist:  {this.props.artPageReducer.name}</li>
+                        <li>Style of Work:  {this.props.artPageReducer.type}</li>
+                        <li>Other Notes:  {this.props.artPageReducer.description}</li>
                     </ul>
 
                 </div>
