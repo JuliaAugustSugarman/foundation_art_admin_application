@@ -14,7 +14,7 @@ class ClientBoards extends Component {
                 <div>
                    
                     <div className="clientbody">
-                        <img src={require('./clientPage.pngnpm')} />
+                        <img src={require('./clientPage.png')} />
                     
                     </div>
 
