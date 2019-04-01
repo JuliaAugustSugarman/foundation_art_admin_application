@@ -38,7 +38,14 @@ class ArtPage extends Component {
 
                 </div>
 
-
+                    <div>
+                    <select>
+                        <option>SELECT PROJECT BOARD</option>
+                        <option>Prime Digital Academy</option>
+                        <option>RCM Plaza</option>
+                        <option>Foshay</option>
+                    </select>
+                    </div>
 
 
 
