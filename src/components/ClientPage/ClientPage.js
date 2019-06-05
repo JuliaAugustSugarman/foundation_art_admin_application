@@ -48,13 +48,50 @@ const styles = theme => ({
 
 class ClientPage extends Component {
 
+    state = {
+        // authorUserId: this.props.user.id,
+        // communityId: this.props.user.community_id,
+        companyName: '',
+        location: '',
+        address: '',
+        contactName: '',
+        contactTitle: '',
+        contactEmail: '',
+        contactPhone: '',
+        notes: '',
+    }
+
+
+    // handles on inputs on form and sets state
+    handleChange = (property) => (event) => {
+        this.setState({
+            ...this.state,
+            [property]: event.target.value
+        });
+    }
+
+    // handles form submit button, sends post dispatch to redux with payload of all selected form inputs + clears form 
+    handleSubmit = () => {
+        this.props.dispatch({ type: 'ADD_CLIENT', payload: this.state });
+        this.setState({
+            companyName: '',
+            location: '',
+            address: '',
+            contactName: '',
+            contactTitle: '',
+            contactEmail: '',
+            contactPhone: '',
+            notes: '',
+        });
+    }
+
     render() {
         const { classes } = this.props;
 
         return (
 
             <div className={classes.root}>
-                <form className={classes.container} Validate autoComplete="off">
+                <form className={classes.container} Validate autoComplete="off" onSubmit={this.handleSubmit}>
                     <Typography color="primary" style={{marginBottom: "-26px", fontWeight: "bold"}}><h2>Add Client</h2></Typography>
                     <Grid container spacing={8}>
                         <Grid item xs={12} sm={6} md={3}>
@@ -69,6 +106,8 @@ class ClientPage extends Component {
                                 name="company name"
                                 margin="normal"
                                 variant="outlined"
+                                value={this.state.companyName}
+                                onChange={this.handleChange("companyName")}
                             />
                         </Grid>
                         <Grid item xs={12} sm={6} md={3}>
@@ -83,6 +122,8 @@ class ClientPage extends Component {
                                 name="location"
                                 margin="normal"
                                 variant="outlined"
+                                value={this.state.location}
+                                onChange={this.handleChange("location")}
                             />
                         </Grid>
                         <Grid item xs={12} sm={12} md={6}>
@@ -97,6 +138,8 @@ class ClientPage extends Component {
                                 name="address"
                                 margin="normal"
                                 variant="outlined"
+                                value={this.state.address}
+                                onChange={this.handleChange("address")}
                             />
                         </Grid>
                         <Grid item xs={12} sm={6} md={3}>
@@ -111,6 +154,8 @@ class ClientPage extends Component {
                                 name="client contact"
                                 margin="normal"
                                 variant="outlined"
+                                value={this.state.contactName}
+                                onChange={this.handleChange("contactName")}
                             />
                         </Grid>
                         <Grid item xs={12} sm={6} md={3}>
@@ -125,6 +170,8 @@ class ClientPage extends Component {
                                 name="title"
                                 margin="normal"
                                 variant="outlined"
+                                value={this.state.contactTitle}
+                                onChange={this.handleChange("contactTitle")}
                             />
                         </Grid>
                         <Grid item xs={12} sm={6} md={3}>
@@ -140,6 +187,8 @@ class ClientPage extends Component {
                                 autoComplete="email"
                                 margin="normal"
                                 variant="outlined"
+                                value={this.state.contactEmail}
+                                onChange={this.handleChange("contactEmail")}
                             />
                         </Grid>
                         <Grid item xs={12} sm={6} md={3}>
@@ -156,6 +205,8 @@ class ClientPage extends Component {
                                 autoComplete="phone"
                                 margin="normal"
                                 variant="outlined"
+                                value={this.state.contactPhone}
+                                onChange={this.handleChange("contactPhone")}
                             />
                         </Grid>
                         <Grid item xs={12} sm={12} md={12}>
@@ -171,6 +222,8 @@ class ClientPage extends Component {
                                 name="notes"
                                 margin="normal"
                                 variant="outlined"
+                                value={this.state.notes}
+                                onChange={this.handleChange("notes")}
                             />
                         </Grid>
                         <Grid item xs={12} sm={12} md={12}>
