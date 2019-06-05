@@ -9,7 +9,7 @@ class Header extends Component {
     render() {
         return (
 <>
-            <div>
+            <div className="logo-div">
 
                 <img className="logo" src="images/final.png" alt="header"/>
 

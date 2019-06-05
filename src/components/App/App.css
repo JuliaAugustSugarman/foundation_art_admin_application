@@ -94,14 +94,14 @@ font-family: 'Raleway', sans-serif;
     height: 150px;
     width: 250px;
 }
-form {
+/* form {
     background-color: #dbd5d5;
     width: 30%;
     height: 300px;
     margin: 20px auto;
     padding: 25px;
     border-radius: 2px;
-}
+} */
 
 input {
     margin: 5px;
