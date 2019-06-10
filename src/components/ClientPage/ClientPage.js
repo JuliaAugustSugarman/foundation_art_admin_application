@@ -26,7 +26,7 @@ const styles = theme => ({
         padding: 24,
     },
     inputNotes: {
-        paddingBottom: 50,
+        // paddingBottom: 20,
     },
     textField: {
         // marginLeft: theme.spacing.unit,
@@ -91,7 +91,7 @@ class ClientPage extends Component {
         return (
 
             <div className={classes.root}>
-                <form className={classes.container} Validate autoComplete="off" onSubmit={this.handleSubmit}>
+                <form className={classes.container} Validate autoComplete="off" >
                     <Typography color="primary" style={{marginBottom: "-26px", fontWeight: "bold"}}><h2>Add Client</h2></Typography>
                     <Grid container spacing={8}>
                         <Grid item xs={12} sm={6} md={3}>
