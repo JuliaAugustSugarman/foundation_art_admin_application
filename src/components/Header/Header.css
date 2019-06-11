@@ -2,7 +2,12 @@
     background-size: 400%;
     box-align: center;
     margin: 0;
-   background-Image: no-repeat;
-   width: 40%;
+    background-Image: no-repeat;
+    width: 30%;
    
+}
+
+.logo-div {
+    text-align: center;
+    margin-top: 20px;
 }

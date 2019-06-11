@@ -22,6 +22,18 @@ CREATE TABLE "style" (
     "id" SERIAL PRIMARY KEY,
     "name" VARCHAR(100) NOT NULL   
 );
+
+CREATE TABLE "client" (
+    "id" SERIAL PRIMARY KEY,
+    "company" VARCHAR (120) NOT NULL,
+    "location" VARCHAR (240),
+    "address" VARCHAR (240),
+    "contact_name" VARCHAR (120) NOT NULL,
+    "contact_title" VARCHAR (120),
+    "contact_email" VARCHAR (120) NOT NULL,
+    "contact_phone" VARCHAR (120) NOT NULL,
+    "notes" VARCHAR (400)
+);
     
 CREATE TABLE "junction" (
     "id" SERIAL PRIMARY KEY,

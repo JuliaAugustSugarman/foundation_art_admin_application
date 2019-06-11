@@ -16,9 +16,40 @@ import CuratorsGallery from '../CuratorsGallery/CuratorsGallery';
 import ArtPage from '../ArtPage/ArtPage';
 import addArtworkForm from '../AddArtworkForm/AddArtworkForm';
 import Home from '../Home/Home';
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import ClientBoards from '../ClientBoards/ClientBoards';
 import ClientPage from '../ClientPage/ClientPage';
 import './App.css';
+
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      light: '#33ab9f',
+      main: '#ff5b45',
+      dark: '#ff5b45',
+      contrastText: '#fff',
+    },
+    secondary: {
+      light: '#ff7961',
+      main: '#f44336',
+      dark: '#ba000d',
+      contrastText: '#000',
+    },
+  },
+  typography: {
+    fontFamily: [
+      'Raleway',
+      'Comfortaa',
+      '"Segoe UI"',
+      'Roboto',
+      '"Helvetica Neue"',
+      'Arial',
+      'sans-serif',
+    ].join(','),
+    fontSize: '15',
+    useNextVariants: true,
+  },
+});
 
 class App extends Component {
   componentDidMount () {
@@ -28,7 +59,7 @@ class App extends Component {
   render() {
     return (
       <Router>
-        
+        <MuiThemeProvider theme={theme}>
         <div>
           <div>
             <Nav />
@@ -96,6 +127,7 @@ class App extends Component {
           {/* <Footer /> */}
           
         </div>
+        </MuiThemeProvider>
       </Router>
   )}
 }
