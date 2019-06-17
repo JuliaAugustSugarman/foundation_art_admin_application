@@ -114,7 +114,7 @@ class ClientPage extends Component {
                             <TextField
                                 required
                                 id="outlined-location-input"
-                                label="Location"
+                                label="LOCATION"
                                 className={classes.textField}
                                 InputProps={{ classes: { input: classes.input } }}
                                 fullWidth
