@@ -23,9 +23,9 @@
   
   transition: all .3s;
 }
-body{
+/* body{
   background-image:  url(background_lightened.png);
-}
+} */
 .homeButton:hover {
     background-color: #f6c4c3;
 }

@@ -12,13 +12,8 @@ class ClientBoards extends Component {
         return (
             <>
                 <div>
-                   
-                    <div className="clientbody">
-                        <img src={require('./clientPage.png')} />
-                    
-                    </div>
 
-
+<h1>I'm the client dashboard</h1>
 
                 </div>
 
